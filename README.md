@@ -11,8 +11,11 @@ parameter](https://github.com/IslasGECI/templater/actions/workflows/actions.yml/
 
 ## Step to use
 - Rename links in `README`.
+- Rename links in `CHANGELOG.md`.
 - Rename image name in `docker-compose.yml`.
 - Rename package name in `DESCRIPTION`.
 - Rename image names in `actions.yml`.
 - Rename package name on install recipe in `Makefile`.
-- Rename package name in `teststhat.R`, `coverage.R` and `test_nothing.R`
+- Rename package name in `teststhat.R`
+- Rename package name in `test_nothing.R`
+- Update token `coverage.R`
