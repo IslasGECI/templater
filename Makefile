@@ -67,10 +67,9 @@ refactor: format
 setup: clean install
 
 install:
-	R -e "devtools::document()" && \
-    R CMD build . && \
-    R CMD check templater_0.1.0.tar.gz && \
-    R CMD INSTALL templater_0.1.0.tar.gz
+	R -e "devtools::install()" && \
+	R -e "devtools::check(error_on = 'error')" && \
+	R -e "devtools::build()"
 
 tests:
 	Rscript -e "devtools::test(stop_on_failure = TRUE)"
