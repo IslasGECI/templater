@@ -11,6 +11,9 @@ parameter](https://github.com/IslasGECI/templater/actions/workflows/actions.yml/
 
 ## Steps to create a new project from this template
 
+> **Note:** For `NEW_R_PACKAGE_NAME`, use all lowercase with no separators (no underscore, no dot, no CamelCase).
+> Example: if repo name is `seabird_tracking`, use `seabirdtracking`.
+
 1. **README.md** (2 changes)
    - Replace `IslasGECI/templater` → `IslasGECI/<NEW_PROJECT_NAME>`
    - Replace codecov token `?token=wyxnwZypMA` → `<NEW_PROJECT_TOKEN>`
@@ -22,17 +25,17 @@ parameter](https://github.com/IslasGECI/templater/actions/workflows/actions.yml/
    - Replace `islasgeci/templater` → `islasgeci/<NEW_PROJECT_NAME>`
 
 4. **DESCRIPTION** (1 change)
-   - Replace `Package: templater` → `Package: <NEW_PROJECT_NAME>`
+   - Replace `Package: templater` → `Package: <NEW_R_PACKAGE_NAME>`
 
 5. **.github/workflows/actions.yml** (7 changes)
    - Replace all `islasgeci/templater` → `islasgeci/<NEW_PROJECT_NAME>`
 
 6. **tests/testthat.R** (2 changes)
-   - Replace `library(templater)` → `library(<NEW_PROJECT_NAME>)`
-   - Replace `test_check("templater")` → `test_check("<NEW_PROJECT_NAME>")`
+   - Replace `library(templater)` → `library(<NEW_R_PACKAGE_NAME>)`
+   - Replace `test_check("templater")` → `test_check("<NEW_R_PACKAGE_NAME>")`
 
 7. **tests/testthat/test_nothing.R** (1 change)
-   - Replace `packageVersion("templater")` → `packageVersion("<NEW_PROJECT_NAME>")`
+   - Replace `packageVersion("templater")` → `packageVersion("<NEW_R_PACKAGE_NAME>")`
 
 8. **tests/testthat/coverage.R** (1 change)
    - Replace codecov token `53631a87-1660-47ba-a000-789a8b05283f` → `<NEW_PROJECT_TOKEN>`
