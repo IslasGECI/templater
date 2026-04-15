@@ -9,13 +9,33 @@ parameter](https://github.com/IslasGECI/templater/actions/workflows/actions.yml/
 ![commits](https://img.shields.io/github/commit-activity/y/IslasGECI/templater)
 ![R-version](https://img.shields.io/github/r-package/v/IslasGECI/templater)
 
-## Step to use
-- Rename links in `README`.
-- Rename links in `CHANGELOG.md`.
-- Rename image name in `docker-compose.yml`.
-- Rename package name in `DESCRIPTION`.
-- Rename image names in `actions.yml`.
-- Rename package name on install recipe in `Makefile`.
-- Rename package name in `teststhat.R`
-- Rename package name in `test_nothing.R`
-- Update token `coverage.R`
+## Steps to create a new project from this template
+
+1. **README.md** (2 changes)
+   - Replace `IslasGECI/templater` → `IslasGECI/<NEW_PROJECT_NAME>`
+   - Replace codecov token `?token=wyxnwZypMA` → `<NEW_PROJECT_TOKEN>`
+
+2. **CHANGELOG.md** (1 change)
+   - Replace `github.com/IslasGECI/templater` → `github.com/IslasGECI/<NEW_PROJECT_NAME>`
+
+3. **docker-compose.yml** (1 change)
+   - Replace `islasgeci/templater` → `islasgeci/<NEW_PROJECT_NAME>`
+
+4. **DESCRIPTION** (1 change)
+   - Replace `Package: templater` → `Package: <NEW_PROJECT_NAME>`
+
+5. **.github/workflows/actions.yml** (7 changes)
+   - Replace all `islasgeci/templater` → `islasgeci/<NEW_PROJECT_NAME>`
+
+6. **tests/testthat.R** (2 changes)
+   - Replace `library(templater)` → `library(<NEW_PROJECT_NAME>)`
+   - Replace `test_check("templater")` → `test_check("<NEW_PROJECT_NAME>")`
+
+7. **tests/testthat/test_nothing.R** (1 change)
+   - Replace `packageVersion("templater")` → `packageVersion("<NEW_PROJECT_NAME>")`
+
+8. **tests/testthat/coverage.R** (1 change)
+   - Replace codecov token `53631a87-1660-47ba-a000-789a8b05283f` → `<NEW_PROJECT_TOKEN>`
+
+### Verification
+Run `grep -r "templater" .` to confirm no instances remain.
