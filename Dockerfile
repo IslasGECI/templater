@@ -1,2 +1,2 @@
-FROM islasgeci/base:22.04
+FROM islasgeci/base:latest
 COPY . /workdir
