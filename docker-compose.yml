@@ -1,10 +1,17 @@
-version: "3.1"
 services:
   islasgeci:
     build:
       context: .
       dockerfile: Dockerfile
     image: islasgeci/templater:latest
+    command: bash
+    volumes:
+      - $PWD:/workdir
+  islasgeci_dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: islasgeci/templater_dev:latest
     command: bash
     volumes:
       - $PWD:/workdir
